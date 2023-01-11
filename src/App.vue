@@ -9,7 +9,10 @@
 </script>
 
 <template>
-  <AppHeader />
+  <div class="container">
+    <AppHeader />
+
+  </div>
   
 </template>
 
