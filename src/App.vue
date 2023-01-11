@@ -9,6 +9,7 @@
 </script>
 
 <template>
+  <AppHeader />
   
 </template>
 
