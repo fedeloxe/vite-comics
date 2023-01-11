@@ -63,18 +63,21 @@
 
 <template>
     <header>
-       <a href="/" class="logo">
-        <img src="../assets/img/dc-logo.png" alt="logo">
-       </a>
-       <nav>
-        <ul>
-            <li v-for="(item, index) in menu" :key="index" >
-                <a :href="item.url" :class="item.active ? 'active' : ''">
-                    {{ item.label }}
-                </a>
-            </li>
-        </ul>
-       </nav>
+        <div class="container">
+            <a href="/" class="logo">
+             <img src="../assets/img/dc-logo.png" alt="logo">
+            </a>
+            <nav>
+             <ul>
+                 <li v-for="(item, index) in menu" :key="index" >
+                     <a :href="item.url" :class="item.active ? 'active' : ''">
+                         {{ item.label }}
+                     </a>
+                 </li>
+             </ul>
+            </nav>
+
+        </div>
     </header>
 </template>
 
@@ -82,32 +85,33 @@
 <style lang="scss">
     @use '../styles/partials/variables' as*;
     @use '../styles/partials/mixins' as*;
-
     header{
-        margin-top: 20px;   
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-
-        ul{
-            list-style:none;
-            @include center;
-            li a{
-                text-decoration: none;
-                padding: 10px;
-                color: $black;
-                font-weight: 700;
-                padding-bottom: 20px;
-                
-
-                &.active, &:hover{
-                    color: $blue;
-                    border-bottom: 2px solid $blue;
+        .container{
+            margin-top: 20px;   
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+    
+            ul{
+                list-style:none;
+                @include center;
+                li a{
+                    text-decoration: none;
+                    padding: 10px;
+                    color: $black;
+                    font-weight: 700;
+                    padding-bottom: 20px;
+    
+    
+                    &.active, &:hover{
+                        color: $blue;
+                        border-bottom: 4px solid $blue;
+                    }
                 }
             }
-            
-        }
-     }
+         }
+
+    }
 
 </style>

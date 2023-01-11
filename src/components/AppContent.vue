@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div >
+    <div class="content">
         <span> --> content goes here </span> 
     </div>
   
@@ -13,6 +13,14 @@
 
 
 <style>
+.content{
+    background-color: black;
+    height: 100px;
+}
+span{
+    color: white;
+}
+
 
 
 </style>
