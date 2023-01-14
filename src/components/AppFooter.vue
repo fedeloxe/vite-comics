@@ -33,6 +33,40 @@ export default {
                     url: '#',
                     active: false
                 },
+            ],
+
+            socials: [
+                {
+                    img: 'footer-facebook.png',
+                    label: 'facebook',
+                    url: '#',
+
+                },
+                {
+                    img: 'footer-twitter.png',
+                    label: 'twitter',
+                    url: '#',
+
+                },
+                {
+                    img: 'footer-youtube.png',
+                    label: 'youtube',
+                    url: '#',
+
+                },
+                {
+                    img: 'footer-pinterest.png',
+                    label: 'pinterest',
+                    url: '#',
+
+                },
+                {
+                    img: 'footer-periscope.png',
+                    label: 'periscope',
+                    url: '#',
+
+                },
+
             ]
 
         }
@@ -109,7 +143,19 @@ export default {
             </div>
         </div>
         <div class="footer-socials"> <!--footer socials-->
-
+            <div class="container">
+                <div class="sing-up-button"><a href="#">SING-UP NOW!</a></div>
+                <div class="socials">
+                    <span>FOLLOW US</span>
+                    <ul>
+                        <li v-for="(item, index) in socials" :key="index">
+                            <a :href="item.url">
+                                <img :src="imgPath(item.img)" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
@@ -192,6 +238,55 @@ footer {
             }
         }
     }
+
+    //social
+    .footer-socials {
+        background-color: #303030;
+
+        .container {
+            height: 100px;
+            padding: 50px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .sing-up-button a {
+                text-decoration: none;
+                color: $white;
+                border: 2px solid $blue;
+                padding: 10px;
+            }
+
+            .socials {
+                display: flex;
+                align-items: center;
+
+                span {
+                    color: $blue;
+                    font-size: 20px;
+                    font-weight: 700;
+
+                }
+
+
+
+                ul {
+                    list-style: none;
+                    @include center;
+                    align-items: center;
+
+                    li a {
+                        display: flex;
+                        padding-right: 10px;
+
+                    }
+                }
+
+            }
+
+        }
+    }
+
 
 }
 </style>
