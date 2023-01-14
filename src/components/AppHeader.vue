@@ -3,7 +3,7 @@ export default {
     data() {
         return {
             activeItem: 0,
-            menu: [
+            menu: [          //array per sezioni sito 
                 {
                     label: 'CHARACTERS',
                     url: '#',
@@ -70,10 +70,10 @@ export default {
 <template>
     <header>
         <div class="container">
-            <a href="/" class="logo">
+            <a href="/" class="logo"> <!-- logo -->
                 <img src="../assets/img/dc-logo.png" alt="logo">
             </a>
-            <nav>
+            <nav> <!--lista sezioni sito -->
                 <ul>
                     <li v-for="(item, index) in menu" :key="index" @click="selectItem(index)"
                         :class="(activeItem === index) ? 'active' : ''">

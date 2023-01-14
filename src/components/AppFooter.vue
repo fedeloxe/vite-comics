@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            menu: [
+            menu: [    //array per menu shopping
                 {
                     img: 'buy-comics-digital-comics.png',
                     label: 'DIGITAL COMICS',
@@ -35,7 +35,7 @@ export default {
                 },
             ],
 
-            socials: [
+            socials: [     //array per icone social
                 {
                     img: 'footer-facebook.png',
                     label: 'facebook',
@@ -71,7 +71,7 @@ export default {
 
         }
     },
-    methods: {
+    methods: {       //funzione per path img icone
         imgPath: function (img) {
             return `/src/assets/img/${img}`
         }
@@ -144,8 +144,8 @@ export default {
         </div>
         <div class="footer-socials"> <!--footer socials-->
             <div class="container">
-                <div class="sing-up-button"><a href="#">SING-UP NOW!</a></div>
-                <div class="socials">
+                <div class="sing-up-button"><a href="#">SING-UP NOW!</a></div> <!--bottone registrazione-->
+                <div class="socials"> <!--lista social-->
                     <span>FOLLOW US</span>
                     <ul>
                         <li v-for="(item, index) in socials" :key="index">
@@ -251,6 +251,7 @@ footer {
             align-items: center;
 
             .sing-up-button a {
+                //bottone registrazione
                 text-decoration: none;
                 color: $white;
                 border: 2px solid $blue;
@@ -258,6 +259,7 @@ footer {
             }
 
             .socials {
+                //icone social
                 display: flex;
                 align-items: center;
 
@@ -265,10 +267,7 @@ footer {
                     color: $blue;
                     font-size: 20px;
                     font-weight: 700;
-
                 }
-
-
 
                 ul {
                     list-style: none;
@@ -278,15 +277,10 @@ footer {
                     li a {
                         display: flex;
                         padding-right: 10px;
-
                     }
                 }
-
             }
-
         }
     }
-
-
 }
 </style>
