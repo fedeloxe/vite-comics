@@ -1,26 +1,23 @@
 <script>
-    export default {
+import comicsData from '../assets/data/dataComics.js';
 
+export default {
+    data() {
+        return {
+            comics: comicsData
+        }
+    }
 }
 </script>
 
 <template>
     <div class="content">
-        <span> --> content goes here </span> 
+
     </div>
-  
+
 </template>
 
 
 <style>
-.content{
-    background-color: black;
-    height: 100px;
-}
-span{
-    color: white;
-}
-
-
-
+.content {}
 </style>

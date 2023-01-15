@@ -107,22 +107,37 @@ header {
 
 
             .active {
-                color: $blue;
                 border-bottom: 4px solid $blue;
-                padding-bottom: 2em;
+                padding-bottom: 20px;
+
 
             }
 
 
-            li a {
-                text-decoration: none;
-                padding: 10px;
-                color: $black;
-                font-weight: 700;
-                padding-bottom: 2em;
+            li {
+                border-bottom: 4px solid $white;
+
+
+                a {
+                    text-decoration: none;
+                    padding: 10px;
+                    color: $black;
+                    font-weight: 700;
+
+                }
+
+                &.active {
+                    a {
+                        color: $blue;
+                    }
+                }
+
+                a:hover {
+                    color: $blue
+                }
+
             }
         }
     }
-
 }
 </style>
